@@ -1,0 +1,30 @@
+apply plugin: 'java'
+apply plugin: 'maven'
+
+sourceCompatibility = 11
+targetCompatibility = 11
+
+group = 'net.tsypanov'
+version = '1.0-SNPASHOT'
+
+tasks.withType(JavaCompile) {
+  options.encoding = 'UTF-8'
+}
+
+repositories {
+  mavenLocal()
+  maven { url "http://repo.maven.apache.org/maven2" }
+}
+
+ext {
+  jvmVersion = "1.21"
+  jupiterVersion = "5.3.2"
+}
+
+dependencies {
+  compile("org.openjdk.jmh:jmh-core:${jvmVersion}")
+  annotationProcessor("org.openjdk.jmh:jmh-generator-annprocess:${jvmVersion}")
+
+  testCompile("org.junit.jupiter:junit-jupiter-api:${jupiterVersion}")
+  testCompile("org.junit.jupiter:junit-jupiter-params:${jupiterVersion}")
+}

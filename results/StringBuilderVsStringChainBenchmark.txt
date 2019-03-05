@@ -1,0 +1,29 @@
+                                          latin    length    stringLength  Mode  Cnt      Score      Error   Units
+
+stringBuilder                              true        10              10  avgt   50    119,976 ±    5,920   ns/op
+stringBuilder                              true       100              10  avgt   50    409,614 ±    6,938   ns/op
+stringBuilder                              true      1000              10  avgt   50   4156,758 ±  367,605   ns/op
+stringConstructor                          true        10              10  avgt   50     89,110 ±    2,246   ns/op
+stringConstructor                          true       100              10  avgt   50    304,585 ±    3,703   ns/op
+stringConstructor                          true      1000              10  avgt   50   2289,550 ±   58,913   ns/op
+
+stringBuilder                             false        10              10  avgt   50    182,939 ±   10,455   ns/op
+stringBuilder                             false       100              10  avgt   50    918,075 ±   21,277   ns/op
+stringBuilder                             false      1000              10  avgt   50   6973,367 ±  397,453   ns/op
+stringConstructor                         false        10              10  avgt   50    111,192 ±    1,216   ns/op
+stringConstructor                         false       100              10  avgt   50    485,865 ±   10,105   ns/op
+stringConstructor                         false      1000              10  avgt   50   3796,168 ±  587,475   ns/op
+
+stringBuilder:·gc.alloc.rate.norm          true        10              10  avgt   50    480,000 ±    0,001    B/op
+stringBuilder:·gc.alloc.rate.norm          true       100              10  avgt   50   4320,000 ±    0,001    B/op
+stringBuilder:·gc.alloc.rate.norm          true      1000              10  avgt   50  41216,000 ±    0,001    B/op
+stringConstructor:·gc.alloc.rate.norm      true        10              10  avgt   50    440,000 ±    0,001    B/op
+stringConstructor:·gc.alloc.rate.norm      true       100              10  avgt   50   3136,000 ±    0,001    B/op
+stringConstructor:·gc.alloc.rate.norm      true      1000              10  avgt   50  30136,000 ±    0,001    B/op
+
+stringBuilder:·gc.alloc.rate.norm         false        10              10  avgt   50   1013,600 ±    3,600    B/op
+stringBuilder:·gc.alloc.rate.norm         false       100              10  avgt   50   9622,400 ±    5,880    B/op
+stringBuilder:·gc.alloc.rate.norm         false      1000              10  avgt   50  93304,000 ±    0,001    B/op
+stringConstructor:·gc.alloc.rate.norm     false        10              10  avgt   50    656,000 ±    0,001    B/op
+stringConstructor:·gc.alloc.rate.norm     false       100              10  avgt   50   5152,000 ±    0,001    B/op
+stringConstructor:·gc.alloc.rate.norm     false      1000              10  avgt   50  50152,000 ±    0,001    B/op
