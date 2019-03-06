@@ -27,6 +27,11 @@ public class StringBuilderVsStringChainBenchmark {
     return StringChainUtil.concatWithStringChain(data.stringArray);
   }
 
+  @Benchmark
+  public String stringChainDefault(Data data) {
+    return StringChainUtil.concatWithStringChainDefault(data.stringArray);
+  }
+
   @State(Scope.Thread)
   public static class Data {
 

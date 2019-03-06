@@ -19,4 +19,13 @@ final class StringChainUtil {
     }
     return sc.toString();
   }
+
+  static String concatWithStringChainDefault(String... stringArray) {
+    StringChain sc = new StringChain();
+    for (String str : stringArray) {
+      sc.add(str);
+    }
+    return sc.toString();
+  }
+
 }
