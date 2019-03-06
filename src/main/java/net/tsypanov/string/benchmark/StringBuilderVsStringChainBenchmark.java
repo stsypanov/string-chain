@@ -41,7 +41,7 @@ public class StringBuilderVsStringChainBenchmark {
     @Param({"10", "100", "1000"})
     private int stringCount;
 
-    @Param({"1", "10", "20"})
+    @Param({"1", "10", "50", "100"})
     private int stringLength;
 
     private String[] stringArray;
