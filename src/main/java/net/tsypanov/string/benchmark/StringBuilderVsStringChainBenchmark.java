@@ -14,7 +14,7 @@ import java.util.concurrent.TimeUnit;
 
 @OutputTimeUnit(TimeUnit.NANOSECONDS)
 @BenchmarkMode(value = Mode.AverageTime)
-@Fork(jvmArgsAppend = {"-XX:+UseParallelGC", "-Xms2g", "-Xmx2g"})
+@Fork(jvmArgsAppend = {"-Xms2g", "-Xmx2g"})
 public class StringBuilderVsStringChainBenchmark {
 
   @Benchmark
